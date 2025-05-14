@@ -253,6 +253,10 @@
               "title": "Dialog 对话框"
             },
             {
+              "path": "/window",
+              "title": "Window 可拖拽框"
+            },
+            {
               "path": "/tooltip",
               "title": "Tooltip 文字提示"
             },

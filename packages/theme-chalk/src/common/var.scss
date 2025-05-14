@@ -623,6 +623,19 @@ $--dialog-font-line-height: $--font-line-height-primary !default;
 /// padding||Spacing|3
 $--dialog-padding-primary: 20px !default;
 
+/* Window
+-------------------------- */
+$--window-background-color: $--color-white !default;
+$--window-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3) !default;
+/// fontSize||Font|1
+$--window-title-font-size: $--font-size-large !default;
+/// fontSize||Font|1
+$--window-content-font-size: 14px !default;
+/// fontLineHeight||LineHeight|2
+$--window-font-line-height: $--font-line-height-primary !default;
+/// padding||Spacing|3
+$--window-padding-primary: 20px !default;
+
 /* Table
 -------------------------- */
 /// color||Color|0
