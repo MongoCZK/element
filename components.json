@@ -88,5 +88,6 @@
   "descriptions": "./packages/descriptions/index.js",
   "descriptions-item": "./packages/descriptions-item/index.js",
   "result": "./packages/result/index.js",
-  "window": "./packages/window/index.js"
+  "window": "./packages/window/index.js",
+  "fold": "./packages/fold/index.js"
 }

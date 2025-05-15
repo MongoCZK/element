@@ -257,6 +257,10 @@
               "title": "Window 可拖拽框"
             },
             {
+              "path": "/fold",
+              "title": "Fold 侧边折叠"
+            },
+            {
               "path": "/tooltip",
               "title": "Tooltip 文字提示"
             },

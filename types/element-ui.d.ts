@@ -90,6 +90,7 @@ import { ElDescriptionsItem } from './descriptions-item'
 import { ElResult } from './result'
 import { ElStatistic } from './statistic'
 import { ElWindow } from './window'
+import { ElFold } from './fold'
 
 export interface InstallationOptions {
   locale: any,
@@ -384,3 +385,6 @@ export class Statistic extends ElStatistic {}
 
 /** Window Component */
 export class Window extends ElWindow {}
+
+/** Fold Component */
+export class Fold extends ElFold {}
