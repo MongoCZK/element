@@ -26,58 +26,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.el-icon-ice-cream-round:before {
-  content: "\e6a0";
-}
-
-.el-icon-ice-cream-square:before {
-  content: "\e6a3";
-}
-
-.el-icon-lollipop:before {
-  content: "\e6a4";
-}
-
-.el-icon-potato-strips:before {
-  content: "\e6a5";
-}
-
-.el-icon-milk-tea:before {
-  content: "\e6a6";
-}
-
-.el-icon-ice-drink:before {
-  content: "\e6a7";
-}
-
-.el-icon-ice-tea:before {
-  content: "\e6a9";
-}
-
-.el-icon-coffee:before {
-  content: "\e6aa";
-}
-
-.el-icon-orange:before {
-  content: "\e6ab";
-}
-
-.el-icon-pear:before {
-  content: "\e6ac";
-}
-
-.el-icon-apple:before {
-  content: "\e6ad";
-}
-
-.el-icon-cherry:before {
-  content: "\e6ae";
-}
-
-.el-icon-watermelon:before {
-  content: "\e6af";
-}
-
 .el-icon-grape:before {
   content: "\e6b0";
 }
@@ -102,134 +50,6 @@
   content: "\e6b5";
 }
 
-.el-icon-cold-drink:before {
-  content: "\e6b6";
-}
-
-.el-icon-coffee-cup:before {
-  content: "\e6b8";
-}
-
-.el-icon-water-cup:before {
-  content: "\e6b9";
-}
-
-.el-icon-hot-water:before {
-  content: "\e6ba";
-}
-
-.el-icon-ice-cream:before {
-  content: "\e6bb";
-}
-
-.el-icon-dessert:before {
-  content: "\e6bc";
-}
-
-.el-icon-sugar:before {
-  content: "\e6bd";
-}
-
-.el-icon-tableware:before {
-  content: "\e6be";
-}
-
-.el-icon-burger:before {
-  content: "\e6bf";
-}
-
-.el-icon-knife-fork:before {
-  content: "\e6c1";
-}
-
-.el-icon-fork-spoon:before {
-  content: "\e6c2";
-}
-
-.el-icon-chicken:before {
-  content: "\e6c3";
-}
-
-.el-icon-food:before {
-  content: "\e6c4";
-}
-
-.el-icon-dish-1:before {
-  content: "\e6c5";
-}
-
-.el-icon-dish:before {
-  content: "\e6c6";
-}
-
-.el-icon-moon-night:before {
-  content: "\e6ee";
-}
-
-.el-icon-moon:before {
-  content: "\e6f0";
-}
-
-.el-icon-cloudy-and-sunny:before {
-  content: "\e6f1";
-}
-
-.el-icon-partly-cloudy:before {
-  content: "\e6f2";
-}
-
-.el-icon-cloudy:before {
-  content: "\e6f3";
-}
-
-.el-icon-sunny:before {
-  content: "\e6f6";
-}
-
-.el-icon-sunset:before {
-  content: "\e6f7";
-}
-
-.el-icon-sunrise-1:before {
-  content: "\e6f8";
-}
-
-.el-icon-sunrise:before {
-  content: "\e6f9";
-}
-
-.el-icon-heavy-rain:before {
-  content: "\e6fa";
-}
-
-.el-icon-lightning:before {
-  content: "\e6fb";
-}
-
-.el-icon-light-rain:before {
-  content: "\e6fc";
-}
-
-.el-icon-wind-power:before {
-  content: "\e6fd";
-}
-
-.el-icon-baseball:before {
-  content: "\e712";
-}
-
-.el-icon-soccer:before {
-  content: "\e713";
-}
-
-.el-icon-football:before {
-  content: "\e715";
-}
-
-.el-icon-basketball:before {
-  content: "\e716";
-}
-
 .el-icon-ship:before {
   content: "\e73f";
 }
@@ -238,16 +58,8 @@
   content: "\e740";
 }
 
-.el-icon-bicycle:before {
-  content: "\e741";
-}
-
 .el-icon-mobile-phone:before {
   content: "\e6d3";
-}
-
-.el-icon-service:before {
-  content: "\e6d4";
 }
 
 .el-icon-key:before {
@@ -886,10 +698,6 @@
   content: "\e7ad";
 }
 
-.el-icon-s-finance:before {
-  content: "\e7ae";
-}
-
 .el-icon-s-comment:before {
   content: "\e7af";
 }
@@ -1082,14 +890,6 @@
   content: "\e7a3";
 }
 
-.el-icon-goods:before {
-  content: "\e7c2";
-}
-
-.el-icon-s-goods:before {
-  content: "\e7b2";
-}
-
 .el-icon-star-off:before {
   content: "\e717";
 }
@@ -1138,12 +938,132 @@
   content: "\e7c9";
 }
 
-.el-icon-eleme:before {
-  content: "\e7c7";
+.el-icon-home-page:before{
+  content: "\e607";
 }
 
-.el-icon-platform-eleme:before {
-  content: "\e7ca";
+.el-icon-station:before {
+  content: "\e644";
+}
+
+.el-icon-substation:before {
+  content: "\e619";
+}
+
+.el-icon-power-line:before {
+  content: "\e635";
+}
+
+.el-icon-s-power:before {
+  content: "\101e1";
+}
+
+.el-icon-alarm:before {
+  content: "\e6cc1";
+}
+
+.el-icon-chart:before {
+  content: "\e7b5";
+}
+
+.el-icon-s-chart:before {
+  content: "\e611";
+}
+
+.el-icon-knowledge-base:before {
+  content: "\e647";
+}
+
+.el-icon-sys-management:before {
+  content: "\e60f";
+}
+
+.el-icon-log:before {
+  content: "\e637";
+}
+
+.el-icon-s-active-p:before {
+  content: "\e615";
+}
+
+.el-icon-s-electricity:before {
+  content: "\e616";
+}
+
+.el-icon-s-voltage:before {
+  content: "\ea04";
+}
+
+.el-icon-role:before {
+  content: "\e648";
+}
+
+.el-icon-sql:before {
+  content: "\e7c51";
+}
+
+.el-icon-knowledge:before {
+  content: "\e61a";
+}
+
+.el-icon-risk-level:before {
+  content: "\e64b";
+}
+
+.el-icon-power-factor:before {
+  content: "\e620";
+}
+
+.el-icon-s-power-factor:before {
+  content: "\e6ae";
+}
+
+.el-icon-panel:before {
+  content: "\e6cd1";
+}
+
+.el-icon-newenergy:before {
+  content: "\e6f4";
+}
+
+.el-icon-platform:before {
+  content: "\e658";
+}
+
+.el-icon-s-reactive-p:before {
+  content: "\e965";
+}
+
+.el-icon-app:before {
+  content: "\e60d";
+}
+
+.el-icon-tab:before {
+  content: "\e62a";
+}
+
+.el-icon-active-p:before {
+  content: "\e663";
+}
+
+.el-icon-sys-config:before {
+  content: "\e614";
+}
+
+.el-icon-sys:before {
+  content: "\e63a";
+}
+
+.el-icon-power:before {
+  content: "\e622";
+}
+
+.el-icon-reactive-p:before {
+  content: "\e6b5";
+}
+
+.el-icon-config:before {
+  content: "\e618";
 }
 
 .el-icon-loading {

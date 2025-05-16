@@ -17,6 +17,7 @@
   border-radius: 4px;
 }
 .icon-list li {
+  position: relative;
   float: left;
   width: 16.66%;
   text-align: center;
@@ -35,7 +36,18 @@
     height: 100%;
     vertical-align: middle;
   }
-
+  .badge{
+    position: absolute;
+    top: 10px;
+    height: 0;
+    line-height: 20px;
+    right: 10px;
+    background: #f56c6c;
+    color: #fff;
+    border-radius: 10px;
+    font-size: 10px;
+    padding: 5px 5px;
+  }
   span {
     display: inline-block;
     line-height: normal;
