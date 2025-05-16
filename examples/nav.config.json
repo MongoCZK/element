@@ -57,7 +57,8 @@
             },
             {
               "path": "/icon",
-              "title": "Icon 图标"
+              "title": "Icon 图标",
+              "badge": "新增"
             },
             {
               "path": "/button",
@@ -254,11 +255,13 @@
             },
             {
               "path": "/window",
-              "title": "Window 可拖拽框"
+              "title": "Window 可拖拽框",
+              "badge": "新增"
             },
             {
               "path": "/fold",
-              "title": "Fold 侧边折叠"
+              "title": "Fold 侧边折叠",
+              "badge": "新增"
             },
             {
               "path": "/tooltip",
@@ -375,7 +378,8 @@
             },
             {
               "path": "/icon",
-              "title": "Icon"
+              "title": "Icon",
+              "badge": "NEW"
             },
             {
               "path": "/button",
@@ -565,6 +569,16 @@
             {
               "path": "/dialog",
               "title": "Dialog"
+            },
+            {
+              "path": "/window",
+              "title": "Window",
+              "badge": "NEW"
+            },
+            {
+              "path": "/fold",
+              "title": "Fold",
+              "badge": "NEW"
             },
             {
               "path": "/tooltip",
