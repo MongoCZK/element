@@ -261,6 +261,10 @@
               "title": "Fold 侧边折叠"
             },
             {
+              "path": "/icon-fold",
+              "title": "IconFold 带图标侧边折叠"
+            },
+            {
               "path": "/tooltip",
               "title": "Tooltip 文字提示"
             },

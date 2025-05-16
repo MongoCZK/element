@@ -636,6 +636,12 @@ $--window-font-line-height: $--font-line-height-primary !default;
 /// padding||Spacing|3
 $--window-padding-primary: 20px !default;
 
+/* IconFold
+-------------------------- */
+$--icon-fold-header-height: 30px!default;
+$--icon-fold-header-padding: 0 5px!default;
+$--icon-fold-header-close-background-color: $--background-color-base !default;
+
 /* Table
 -------------------------- */
 /// color||Color|0

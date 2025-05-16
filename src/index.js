@@ -91,6 +91,7 @@ import DescriptionsItem from '../packages/descriptions-item/index.js';
 import Result from '../packages/result/index.js';
 import Window from '../packages/window/index.js';
 import Fold from '../packages/fold/index.js';
+import IconFold from '../packages/icon-fold/index.js';
 import locale from 'element-ui/src/locale';
 import CollapseTransition from 'element-ui/src/transitions/collapse-transition';
 
@@ -181,6 +182,7 @@ const components = [
   Result,
   Window,
   Fold,
+  IconFold,
   CollapseTransition
 ];
 
@@ -311,5 +313,6 @@ export default {
   DescriptionsItem,
   Result,
   Window,
-  Fold
+  Fold,
+  IconFold
 };

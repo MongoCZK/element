@@ -89,5 +89,6 @@
   "descriptions-item": "./packages/descriptions-item/index.js",
   "result": "./packages/result/index.js",
   "window": "./packages/window/index.js",
-  "fold": "./packages/fold/index.js"
+  "fold": "./packages/fold/index.js",
+  "icon-fold": "./packages/icon-fold/index.js"
 }
