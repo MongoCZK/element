@@ -1,0 +1,41 @@
+@import "mixins/mixins";
+@import "common/var";
+
+
+@include b(icon-fold) {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  @include e(header) {
+     width: 100%;
+    height: $--icon-fold-header-height;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: $--icon-fold-header-padding;
+    .el-icon-fold__header__title {
+      white-space: nowrap;
+    }
+    .el-icon-fold-img {
+      white-space: nowrap;
+    }
+  }
+  @include e(wrap) {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    flex: 1;
+  }
+  @include e(close) {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    background: $--icon-fold-header-close-background-color;
+    text-align: center;
+  }
+}

@@ -208,7 +208,7 @@ Window 的内容是懒渲染的，即在第一次被打开之前，传入的默�
 
 开启拖拽后，Window 可以通过鼠标进行拖拽。
 
-:::demo 将`canDrag`设置为`true`即可开启拖拽。
+:::demo 将`can-drag`设置为`true`即可开启拖拽。
 
 ```html
 <el-button type="text" @click="centerDialogVisible = true">点击打开可拖拽Window</el-button>
@@ -216,7 +216,7 @@ Window 的内容是懒渲染的，即在第一次被打开之前，传入的默�
 <el-window
   title="提示"
   :visible.sync="centerDialogVisible"
-  :canDrag="canDrag"
+  :can-drag="canDrag"
   initWidth="30%"
   center>
   <span>这个弹窗可以拖拽头部进行控制弹奏移动</span>
@@ -260,7 +260,7 @@ Window 的内容是懒渲染的，即在第一次被打开之前，传入的默�
 | close-on-press-escape | 是否可以通过按下 ESC 关闭 Window | boolean    | — | true |
 | show-close | 是否显示关闭按钮 | boolean    | — | true |
 | show-fullScreen | 是否显示全屏按钮 | boolean    | — | true |
-| canDrag | 是否可以进行拖拽 | boolean    | — | false |
+| can-drag | 是否可以进行拖拽 | boolean    | — | false |
 | before-close | 关闭前的回调，会暂停 Window 的关闭 | function(done)，done 用于关闭 Window | — | — |
 | center | 是否对头部和底部采用居中布局 | boolean | — | false |
 | destroy-on-close | 关闭时销毁 Window 中的元素 | boolean | — | false |

@@ -91,6 +91,7 @@ import { ElResult } from './result'
 import { ElStatistic } from './statistic'
 import { ElWindow } from './window'
 import { ElFold } from './fold'
+import { ElIconFold } from './icon-fold'
 
 export interface InstallationOptions {
   locale: any,
@@ -388,3 +389,6 @@ export class Window extends ElWindow {}
 
 /** Fold Component */
 export class Fold extends ElFold {}
+
+/** Icon Fold Component */
+export class IconFold extends ElIconFold {}
