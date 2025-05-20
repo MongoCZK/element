@@ -1,5 +1,31 @@
 ## Changelog
 
+### 2.15.17
+
+*2025-05-20*
+
+#### 优化
+- Feat
+  - Add window component
+  - Add fold panel component
+  - Extend icon fonts and mark the extended fonts in the example interface
+
+### 2.15.16
+
+*2025-05-07*
+
+#### 优化
+- Chore
+  - Update Vue2 version
+
+### 2.15.15
+
+*2025-04-20*
+
+#### 优化
+- Chore
+  - Update Vue2 version
+
 ### 2.15.14
 
 *2023-08-24*
@@ -26,11 +52,11 @@
 
 #### Bug fixes
 - Docs
-  - Fix Statistic docs (#22383 by @JUST-Limbo) 
-  - Fix Input docs (#22093 by @lm312)  
-  - Fix en-US docs (#22268 #22269 #22270 by @Hazel-Lin)  
+  - Fix Statistic docs (#22383 by @JUST-Limbo)
+  - Fix Input docs (#22093 by @lm312)
+  - Fix en-US docs (#22268 #22269 #22270 by @Hazel-Lin)
   - Fix Pagination docs (#22288 by @xujintai123)
-  - Fix: Links docs (#22370 by @itmier)    
+  - Fix: Links docs (#22370 by @itmier)
 - Statistics
   - fix slot display bug  (#22375 by @webvs2)
 - Chore
@@ -39,7 +65,7 @@
 - InputNumber
   - Fix touch one click trigger twice on the window touch pad (#22185 by @mrsai)
 - Image
-  - Add initialIndex prop (#22346 by @inkroom) 
+  - Add initialIndex prop (#22346 by @inkroom)
 - Statistics
   - Updated countdown feature to localize lodash Closes (#22260 by @webvs2)
   - Update code and doc (#22276 by @webvs2)
@@ -62,7 +88,7 @@
 
 #### Bug fixes
 - Docs
-  - Fix Radio docs (#22178 by @bchen1029) 
+  - Fix Radio docs (#22178 by @bchen1029)
   - Fix Progress docs
 #### Optimization
 - I18n
@@ -89,7 +115,7 @@
   - Fix Popover docs (#22083 by @lm312)
   - Fix Skeleton docs (#22092 by @lm312)
   - Fix DatePicker docs (#21970 by @guojiongwei)
-- Tree: 
+- Tree:
   - fix lazy-load default check problem (#21934 by @kiss-yu)
 
 #### Optimization
@@ -100,7 +126,7 @@
   - Add translation of Malaysian (#22028 by @iorange0411)
   - Update translation of Swahili (#21904 by @Cholowao)
 - Utils
-  - update date-util.js (#22099 by @Due07)  
+  - update date-util.js (#22099 by @Due07)
 - DatePicker
   - add months And years type (#21918 by @akiko123456)
 
@@ -232,31 +258,31 @@
 
 #### New features
 
-- Descriptions 
+- Descriptions
   - add description component (#21129 by @cs1707)
-- Result 
+- Result
   - add result component (#21171 by @cs1707)
 
 #### Bug fixes
 
-- Utils 
+- Utils
   - fix isScroll (#21098 by @canvascat)
-- Translation 
+- Translation
   - update it.js (#21133 by @bliberi)
-- RadioGroup 
+- RadioGroup
   - fix RadioGroup used in component causes exception #17908 (#20783 by @lceric)
-- Message 
+- Message
   - fix message[type] (#21088 by @cs1707)
-- Carousel 
+- Carousel
   - reset the timer when setActiveItem method is called (#20846 by @Nekojita1)
-- Cascader 
+- Cascader
   - fix emitPath (#21185 by @cs1707)
-- Select 
+- Select
   - fix select filterable bug (#17494 by @profore)
   - fix a bug that makes the browser jitter in zoom mode (#21197 by @cs1707)
-- Tree 
+- Tree
   - fix insertChild (#21194 by @cs1707)
-  
+
 ### 2.15.3
 
 *2021-06-29*
@@ -323,7 +349,7 @@
   - fix incorrect image object fit ratio in IE (#19583 by @charlie0228)
 - Cascader
   - fix cascader panel active path (#20730 by @cs1707)
-- Calendar 
+- Calendar
   - fix calendar component i18n bug (#20758 by @iamkun)
 - ColorPicker
   - fix bugs (by @UxieVerity)
@@ -487,13 +513,13 @@
 - Image
   - Perfect picture preview behavior (#16985 by @luckyCao)
   - Fix shield the page when preview big image (#16796 by @luckyCao)
-- Drawer 
+- Drawer
   - Bugfix drawer-append-to-body-not-working (#16953 by @JeremyWuuuuu)
 - Select
   - Fix tag show value or empty issue (17199 by @luckyCao)
 - Scrollbar
   - Fix FireFox scroll bar width (#18091 by @iamkun)
-  
+
 #### Optimization
 
 - I18n
@@ -625,7 +651,7 @@
   - Display correct header when range is specified (#16354 by @ziyoung)
 - Submenu
   - Fix prop append-to-body (#16289 by @a631807682)
-- Table 
+- Table
   - Fix tree table when updating data (#16481 by @island205)
 - Select
   - Fix memory leak issue (#16463 by @island205)
