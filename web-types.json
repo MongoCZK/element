@@ -1,7 +1,7 @@
 {
   "framework": "vue",
   "name": "element-ui",
-  "version": "2.15.9",
+  "version": "2.15.17",
   "description-markup": "markdown",
   "contributions": {
     "html": {

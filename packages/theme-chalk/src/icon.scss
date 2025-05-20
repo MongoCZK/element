@@ -26,38 +26,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.el-icon-grape:before {
-  content: "\e6b0";
-}
-
-.el-icon-refrigerator:before {
-  content: "\e6b1";
-}
-
-.el-icon-goblet-square-full:before {
-  content: "\e6b2";
-}
-
-.el-icon-goblet-square:before {
-  content: "\e6b3";
-}
-
-.el-icon-goblet-full:before {
-  content: "\e6b4";
-}
-
-.el-icon-goblet:before {
-  content: "\e6b5";
-}
-
-.el-icon-ship:before {
-  content: "\e73f";
-}
-
-.el-icon-truck:before {
-  content: "\e740";
-}
-
 .el-icon-mobile-phone:before {
   content: "\e6d3";
 }
@@ -74,32 +42,8 @@
   content: "\e6e5";
 }
 
-.el-icon-watch:before {
-  content: "\e6fe";
-}
-
-.el-icon-watch-1:before {
-  content: "\e6ff";
-}
-
-.el-icon-timer:before {
-  content: "\e702";
-}
-
-.el-icon-alarm-clock:before {
-  content: "\e703";
-}
-
 .el-icon-map-location:before {
   content: "\e704";
-}
-
-.el-icon-delete-location:before {
-  content: "\e705";
-}
-
-.el-icon-add-location:before {
-  content: "\e706";
 }
 
 .el-icon-location-information:before {
@@ -144,10 +88,6 @@
 
 .el-icon-stopwatch:before {
   content: "\e710";
-}
-
-.el-icon-mic:before {
-  content: "\e711";
 }
 
 .el-icon-copy-document:before {
@@ -196,10 +136,6 @@
 
 .el-icon-position:before {
   content: "\e729";
-}
-
-.el-icon-postcard:before {
-  content: "\e72a";
 }
 
 .el-icon-message:before {
@@ -258,14 +194,6 @@
   content: "\e739";
 }
 
-.el-icon-female:before {
-  content: "\e73a";
-}
-
-.el-icon-male:before {
-  content: "\e73b";
-}
-
 .el-icon-guide:before {
   content: "\e73c";
 }
@@ -280,10 +208,6 @@
 
 .el-icon-discount:before {
   content: "\e745";
-}
-
-.el-icon-wallet:before {
-  content: "\e747";
 }
 
 .el-icon-coin:before {
@@ -302,64 +226,12 @@
   content: "\e74b";
 }
 
-.el-icon-present:before {
-  content: "\e74c";
-}
-
-.el-icon-sell:before {
-  content: "\e6d5";
-}
-
-.el-icon-sold-out:before {
-  content: "\e6d6";
-}
-
-.el-icon-shopping-bag-2:before {
-  content: "\e74d";
-}
-
-.el-icon-shopping-bag-1:before {
-  content: "\e74e";
-}
-
-.el-icon-shopping-cart-2:before {
-  content: "\e74f";
-}
-
-.el-icon-shopping-cart-1:before {
-  content: "\e750";
-}
-
-.el-icon-shopping-cart-full:before {
-  content: "\e751";
-}
-
-.el-icon-smoking:before {
-  content: "\e752";
-}
-
-.el-icon-no-smoking:before {
-  content: "\e753";
-}
-
 .el-icon-house:before {
   content: "\e754";
 }
 
-.el-icon-table-lamp:before {
-  content: "\e755";
-}
-
-.el-icon-school:before {
-  content: "\e756";
-}
-
 .el-icon-office-building:before {
   content: "\e757";
-}
-
-.el-icon-toilet-paper:before {
-  content: "\e758";
 }
 
 .el-icon-notebook-2:before {
@@ -380,18 +252,6 @@
 
 .el-icon-receiving:before {
   content: "\e75d";
-}
-
-.el-icon-suitcase-1:before {
-  content: "\e760";
-}
-
-.el-icon-suitcase:before {
-  content: "\e761";
-}
-
-.el-icon-film:before {
-  content: "\e763";
 }
 
 .el-icon-collection-tag:before {
@@ -430,16 +290,8 @@
   content: "\e76c";
 }
 
-.el-icon-brush:before {
-  content: "\e76e";
-}
-
 .el-icon-headset:before {
   content: "\e76f";
-}
-
-.el-icon-umbrella:before {
-  content: "\e770";
 }
 
 .el-icon-scissors:before {
@@ -954,10 +806,6 @@
   content: "\e635";
 }
 
-.el-icon-s-power:before {
-  content: "\101e1";
-}
-
 .el-icon-alarm:before {
   content: "\e6cc1";
 }
@@ -982,8 +830,28 @@
   content: "\e637";
 }
 
+.el-icon-power:before {
+  content: "\e622";
+}
+
+.el-icon-s-power:before {
+  content: "\101e1";
+}
+
+.el-icon-active-p:before {
+  content: "\e663";
+}
+
 .el-icon-s-active-p:before {
   content: "\e615";
+}
+
+.el-icon-reactive-p:before {
+  content: "\e6b5";
+}
+
+.el-icon-s-reactive-p:before {
+  content: "\e965";
 }
 
 .el-icon-s-electricity:before {
@@ -992,6 +860,14 @@
 
 .el-icon-s-voltage:before {
   content: "\ea04";
+}
+
+.el-icon-power-factor:before {
+  content: "\e620";
+}
+
+.el-icon-s-power-factor:before {
+  content: "\e6ae";
 }
 
 .el-icon-role:before {
@@ -1010,14 +886,6 @@
   content: "\e64b";
 }
 
-.el-icon-power-factor:before {
-  content: "\e620";
-}
-
-.el-icon-s-power-factor:before {
-  content: "\e6ae";
-}
-
 .el-icon-panel:before {
   content: "\e6cd1";
 }
@@ -1030,20 +898,12 @@
   content: "\e658";
 }
 
-.el-icon-s-reactive-p:before {
-  content: "\e965";
-}
-
 .el-icon-app:before {
   content: "\e60d";
 }
 
 .el-icon-tab:before {
   content: "\e62a";
-}
-
-.el-icon-active-p:before {
-  content: "\e663";
 }
 
 .el-icon-sys-config:before {
@@ -1054,16 +914,28 @@
   content: "\e63a";
 }
 
-.el-icon-power:before {
-  content: "\e622";
+.el-icon-ppt:before {
+  content: "\e7ca";
 }
 
-.el-icon-reactive-p:before {
-  content: "\e6b5";
+.el-icon-word:before {
+  content: "\e7cb";
 }
 
-.el-icon-config:before {
-  content: "\e618";
+.el-icon-excel:before {
+  content: "\e7cc";
+}
+
+.el-icon-pdf:before {
+  content: "\e7d1";
+}
+
+.el-icon-jpg:before {
+  content: "\e7cd";
+}
+
+.el-icon-png:before {
+  content: "\e7ce";
 }
 
 .el-icon-loading {

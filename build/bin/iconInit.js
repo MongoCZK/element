@@ -17,6 +17,6 @@ nodes.forEach((node) => {
   }
 });
 
-classList.reverse(); // 希望按 css 文件顺序倒序排列
+// classList.reverse(); // 希望按 css 文件顺序倒序排列
 
 fs.writeFile(path.resolve(__dirname, '../../examples/icon.json'), JSON.stringify(classList), () => {});
