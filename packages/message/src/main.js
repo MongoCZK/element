@@ -1,3 +1,17 @@
+const defaults = {
+  message: '',
+  type: 'info',
+  iconClass: '',
+  dangerouslyUseHTMLString: false,
+  customClass: '',
+  duration: 3000,
+  showClose: false,
+  center: false,
+  onClose: null,
+  offset: 20,
+  intervalOffset: 16
+};
+
 import Vue from 'vue';
 import Main from './main.vue';
 import { PopupManager } from 'element-ui/src/utils/popup';
@@ -11,9 +25,12 @@ let seed = 1;
 
 const Message = function(options) {
   if (Vue.prototype.$isServer) return;
-  options = options || {};
+
+  const defaultOptions = { ...defaults, ...Message.defaults };
+  options = options || defaultOptions;
   if (typeof options === 'string') {
     options = {
+      ...defaultOptions,
       message: options
     };
   }
@@ -33,9 +50,11 @@ const Message = function(options) {
   }
   instance.$mount();
   document.body.appendChild(instance.$el);
-  let verticalOffset = options.offset || 20;
+
+  const intervalOffset = options.intervalOffset || defaultOptions.intervalOffset;
+  let verticalOffset = options.offset || defaultOptions.offset;
   instances.forEach(item => {
-    verticalOffset += item.$el.offsetHeight + 16;
+    verticalOffset += item.$el.offsetHeight + intervalOffset;
   });
   instance.verticalOffset = verticalOffset;
   instance.visible = true;
@@ -46,13 +65,17 @@ const Message = function(options) {
 
 ['success', 'warning', 'info', 'error'].forEach(type => {
   Message[type] = (options) => {
+    const defaultOptions = { ...defaults, ...Message.defaults };
+
     if (isObject(options) && !isVNode(options)) {
       return Message({
+        ...defaultOptions,
         ...options,
         type
       });
     }
     return Message({
+      ...defaultOptions,
       type,
       message: options
     });
@@ -86,6 +109,10 @@ Message.closeAll = function() {
   for (let i = instances.length - 1; i >= 0; i--) {
     instances[i].close();
   }
+};
+
+Message.setDefaults = defaults => {
+  Message.defaults = defaults;
 };
 
 export default Message;

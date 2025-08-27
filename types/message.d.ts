@@ -48,6 +48,9 @@ export interface ElMessageOptions {
   
   /** Set the distance to the top of viewport. Default is 20 px. */
   offset?: number
+
+  /** Set the interval distance between components. Default is 16px */
+  intervalOffset?: number
 }
 
 export interface ElMessage {
@@ -79,7 +82,10 @@ export interface ElMessage {
   error (text: string): ElMessageComponent
   
   /** Show an error message with options */
-  error (options: ElMessageOptions): ElMessageComponent
+  error(options: ElMessageOptions): ElMessageComponent
+  
+  /** Set default options of message boxes */
+  setDefaults (defaults: ElMessageOptions): void
 }
 
 declare module 'vue/types/vue' {
