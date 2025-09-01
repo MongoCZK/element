@@ -137,12 +137,5 @@ French documentation is made possible by these community developers:
 - [smalesys](https://github.com/smalesys)
 - [blombard](https://github.com/blombard)
 
-## Join Discussion Group
-
-Scan the QR code using [Dingtalk App](https://www.dingtalk.com/) to join in discussion group :
-
-<img alt="Join Discusion Group" src="https://user-images.githubusercontent.com/17680888/93177882-0ae92d80-f766-11ea-870d-3fa2d7f06454.png" width="300">
-
-
 ## LICENSE
 [MIT](LICENSE)

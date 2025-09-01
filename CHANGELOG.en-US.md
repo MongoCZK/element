@@ -1,37 +1,47 @@
 ## Changelog
 
+### 2.15.19
+
+*2025-09-01*
+
+#### Bug fixes
+- Font
+  - Fix font file compatibility for older browser versions (@MongoCZK)
+
 ### 2.15.18
 
 *2025-08-27*
 
 #### Optimization
-
-- Message
-  - add setDefaults function with defaults object
-  - add intervalOffset to change the distance between 2 messages.
+  - Message: 
+    - add setDefaults function with defaults object; (@FFFengMJL)
+    - add intervalOffset to change the distance between 2 messages. (@FFFengMJL)
 
 ### 2.15.17
 
 *2025-05-20*
 
 #### New Features
-- Add window component
-- Add fold panel component
-- Extend icon fonts and mark the extended fonts in the example interface
+- Feat
+  - Add window component (@Mr-Wang-Y-P)
+  - Add fold panel component (@Mr-Wang-Y-P)
+  - Extend icon fonts and mark the extended fonts in the example interface (@MongoCZK)
 
 ### 2.15.16
 
 *2025-05-07*
 
 #### Optimization
-- Update Vue2 version
+- Chore
+  - Update Vue2 version (@MongoCZK)
 
 ### 2.15.15
 
 *2025-04-20*
 
-#### Optimization
-- Update Vue2 version
+#### 优化
+- Chore
+  - Update Vue2 version (@MongoCZK)
 
 ### 2.15.14
 
@@ -1017,7 +1027,7 @@
   - Update build config (#14821 by @abc3660170)
   - Add hmr (#15221 by @SimonaliaChen)
   - Use sourcemap in dev environment (#15087 by @ibufu)
-  Docs
+Docs
   - Rename variable in docs (#14602 #15003 #15094 #15105 by @liupl)
   - Fix upload doc error (#15023 by @iamkun)
   - Update Form custom validator doc (#15040 by @iamkun)
