@@ -1,5 +1,13 @@
 ## 更新日志
 
+### 2.15.20
+
+*2025-09-05*
+
+#### Bug 修复
+- Font
+  - 修正了 `el-select-dropdown__item.selected` 图标的 content 值，从 `\e60a` 改为 `\e61a` (@MongoCZK)
+
 ### 2.15.19
 
 *2025-09-01*

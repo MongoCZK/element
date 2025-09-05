@@ -1,5 +1,13 @@
 ## Changelog
 
+### 2.15.20
+
+*2025-09-05*
+
+#### Bug 修复
+- Font
+  - Corrected content value for 'el-select-dropdown__item.selected::after' from `\e6da` to `\e028` (@MongoCZK)
+
 ### 2.15.19
 
 *2025-09-01*
