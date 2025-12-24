@@ -90,5 +90,8 @@
   "result": "./packages/result/index.js",
   "window": "./packages/window/index.js",
   "fold": "./packages/fold/index.js",
-  "icon-fold": "./packages/icon-fold/index.js"
+  "icon-fold": "./packages/icon-fold/index.js",
+  "splitter": "./packages/splitter/index.js",
+  "splitter-panel": "./packages/splitter-panel/index.js",
+  "splitter-bar": "./packages/splitter-bar/index.js"
 }

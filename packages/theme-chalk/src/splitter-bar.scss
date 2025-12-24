@@ -1,0 +1,41 @@
+@import "mixins/mixins";
+
+@include b(splitter-bar) {
+    background: #ccc;
+
+    @include m(vertical) {
+        width: 5px;
+        .drag-locked {
+            cursor: default;
+        }
+        .drag-min-limit {
+            /* size == min，不能再小，只能往右拖（增大） */
+            cursor: e-resize;
+        }
+        .drag-max-limit {
+            /* size == max，不能再大，只能往左拖（减小） */
+            cursor: w-resize;
+        }
+        .drag-normal {
+            cursor: col-resize;
+        }
+    }
+
+    @include m(horizontal) {
+        height: 5px;
+        .drag-locked {
+            cursor: default;
+        }
+        .drag-min-limit {
+            /* size == min，不能再小（高度不能再小），只能往下拖（增大） */
+            cursor: s-resize;
+        }
+        .drag-max-limit {
+            /* size == max，不能再大，只能往上拖（减小） */
+            cursor: n-resize;
+        }
+        .drag-normal {
+            cursor: row-resize;
+        }
+    }
+}

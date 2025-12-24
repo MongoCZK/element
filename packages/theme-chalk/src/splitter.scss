@@ -1,0 +1,20 @@
+@import "mixins/mixins";
+@import "common/var";
+
+@include b(splitter) {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+
+}
+
+.el-splitter-vertical {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.el-splitter-horizontal {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}

@@ -92,6 +92,9 @@ import Result from '../packages/result/index.js';
 import Window from '../packages/window/index.js';
 import Fold from '../packages/fold/index.js';
 import IconFold from '../packages/icon-fold/index.js';
+import Splitter from '../packages/splitter/index.js';
+import SplitterPanel from '../packages/splitter-panel/index.js';
+import SplitterBar from '../packages/splitter-bar/index.js';
 import locale from 'element-ui/src/locale';
 import CollapseTransition from 'element-ui/src/transitions/collapse-transition';
 
@@ -183,6 +186,9 @@ const components = [
   Window,
   Fold,
   IconFold,
+  Splitter,
+  SplitterPanel,
+  SplitterBar,
   CollapseTransition
 ];
 
@@ -314,5 +320,8 @@ export default {
   Result,
   Window,
   Fold,
-  IconFold
+  IconFold,
+  Splitter,
+  SplitterPanel,
+  SplitterBar
 };
