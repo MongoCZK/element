@@ -239,6 +239,47 @@ Window 的内容是懒渲染的，即在第一次被打开之前，传入的默�
 ```
 :::
 
+### 自定义边界
+
+自定义边界。
+将`boundary`设置为自定义边界。
+默认边界为：
+boundary：{left: 0, top: 0, right: 0, bottom: 0}
+
+示例为上下左右边界为：100
+
+:::demo 
+
+```html
+<el-button type="text" @click="centerDialogVisible = true">点击打开可拖拽Window</el-button>
+
+<el-window
+  title="提示"
+  :visible.sync="centerDialogVisible"
+  :can-drag="canDrag"
+  :boundary="{left: 100, top: 100, right: 100, bottom: 100}"
+  initWidth="30%"
+  center>
+  <span>这个弹窗可以拖拽头部进行控制弹奏移动</span>
+  <span>这个弹窗可以自定义边界，不能超出边界范围，示例为上下左右边界为：100</span>
+  <span slot="footer" class="window-footer">
+    <el-button @click="centerDialogVisible = false">取 消</el-button>
+    <el-button type="primary" @click="centerDialogVisible = false">确 定</el-button>
+  </span>
+</el-window>
+
+<script>
+  export default {
+    data() {
+      return {
+        centerDialogVisible: false,
+        canDrag: true
+      };
+    }
+  };
+</script>
+```
+:::
 
 
 ### Attributes
@@ -252,6 +293,8 @@ Window 的内容是懒渲染的，即在第一次被打开之前，传入的默�
 | initY       | Window CSS 中的 margin-left 值 | string | — | 15vh |
 | initX       | Window CSS 中的 margin-top 值 | string | — | auto |
 | modal     | 是否需要遮罩层   | boolean   | — | false |
+| boundary     | 自定义边界 | object    | — | {left: 0, top: 0, right: 0, bottom: 0} |
+| resizable     | 是否可以调整大小 | boolean    | — | true |
 | modal-append-to-body     | 遮罩层是否插入至 body 元素上，若为 false，则遮罩层会插入至 Window 的父元素上   | boolean   | — | true |
 | append-to-body     | Window 自身是否插入至 body 元素上。嵌套的 Window 必须指定该属性并赋值为 true   | boolean   | — | false |
 | lock-scroll | 是否在 Window 出现时将 body 滚动锁定 | boolean | — | true |

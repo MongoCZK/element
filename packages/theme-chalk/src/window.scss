@@ -21,6 +21,11 @@
     overflow: auto;
   }
 
+  @include e(resizable) {
+    resize: both;
+    overflow: hidden;
+  }
+
   @include e(wrapper) {
     position: fixed;
     top: 0;

@@ -13,9 +13,10 @@
         :key="key"
         aria-modal="true"
         :aria-label="title || 'window'"
-        :class="['el-window', { 'is-fullscreen': localFullscreen, 'el-window--center': center }, customClass]"
+        :class="['el-window', { 'is-fullscreen': localFullscreen, 'el-window--center': center, 'el-window__resizable': resizable && !localFullscreen }, customClass]"
         ref="window"
-        :style="style">
+        :style="style"
+        >
         <div class="el-window__header" :style="{'cursor': canDrag ? 'grab' : 'default'}" @mousedown="startDrag" @mousemove="handleMouseMove" @mouseup="handleMouseUp" 
         @mouseleave="handleMouseUp">
           <slot name="title">
@@ -146,7 +147,24 @@
         default: false
       },
 
-      destroyOnClose: Boolean
+      destroyOnClose: Boolean,
+
+      // 边界配置，支持自定义拖拽边界
+      boundary: {
+        type: Object,
+        default: () => ({
+          left: 0,
+          top: 0,
+          right: 0,
+          bottom: 0
+        })
+      },
+
+      // 是否可resize
+      resizable: {
+        type: Boolean,
+        default: true
+      }
     },
 
     data() {
@@ -159,6 +177,10 @@
         startY: 0,
         windowX: 0,
         windowY: 0,
+        width: 0,
+        height: 0,
+        beforeFullsreenWidth: 0,
+        beforeFullsreenHeight: 0,
         // 添加标记是否初次加载的变量
         isInitialLoad: true
       };
@@ -185,6 +207,20 @@
             });
           }
         }
+      },
+      localFullscreen(val) {
+        if (val) {
+          // 保存全屏前状态
+          const windowRect = this.$refs.window.getBoundingClientRect();
+          if (windowRect.width !== 0 || windowRect.height !== 0) {
+            this.beforeFullsreenWidth = windowRect.width;
+            this.beforeFullsreenHeight = windowRect.height;
+          }
+        } else {
+          // 恢复全屏前状态
+          this.width = this.beforeFullsreenWidth;
+          this.height = this.beforeFullsreenHeight;
+        }
       }
     },
 
@@ -194,10 +230,15 @@
         if (!this.localFullscreen) {
           style.marginTop = this.initY;
           style.marginLeft = this.initX;
-          if (this.initWidth) {
+          // 如果已经有手动调整的尺寸，使用调整后的尺寸
+          if (this.width > 0) {
+            style.width = `${this.width}px`;
+          } else if (this.initWidth) {
             style.width = this.initWidth;
           }
-          if (this.initHeight) {
+          if (this.height > 0) {
+            style.height = `${this.height}px`;
+          } else if (this.initHeight) {
             style.height = this.initHeight;
           }
           // 添加拖拽位置样式
@@ -205,6 +246,13 @@
             style.marginLeft = `${this.windowX}px`;
             style.marginTop = `${this.windowY}px`;
           }
+        } else {
+          style.marginTop = this.boundary.top + 'px';
+          style.marginLeft = this.boundary.left + 'px';
+          const xPadding = this.boundary.right + this.boundary.left;
+          const yPadding = this.boundary.bottom + this.boundary.top;
+          style.width = `calc(100% - ${xPadding}px)`;
+          style.height = `calc(100% - ${yPadding}px)`;
         }
         return style;
       }
@@ -258,6 +306,8 @@
         this.startX = event.clientX;
         this.startY = event.clientY;
         const windowRect = this.$refs.window.getBoundingClientRect();
+        this.width = windowRect.width;
+        this.height = windowRect.height;
         // 减去页面滚动距离
         const scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
         const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
@@ -272,12 +322,13 @@
         this.windowY += deltaY;
         this.startX = event.clientX;
         this.startY = event.clientY;
-        // 限制 window 在可视区域内
-        const windowWidth = window.innerWidth;
-        const windowHeight = window.innerHeight;
+        // 获取边界配置
+        const boundary = this.boundary;
         const windowRect = this.$refs.window.getBoundingClientRect();
-        this.windowX = Math.max(0, Math.min(this.windowX, windowWidth - windowRect.width));
-        this.windowY = Math.max(0, Math.min(this.windowY, windowHeight - windowRect.height));
+
+        // 限制 window 在边界内
+        this.windowX = Math.max(boundary.left, Math.min(this.windowX, window.innerWidth - boundary.right - windowRect.width));
+        this.windowY = Math.max(boundary.top, Math.min(this.windowY, window.innerHeight - boundary.bottom - windowRect.height));
       },
       handleMouseUp() {
         this.isDragging = false;
