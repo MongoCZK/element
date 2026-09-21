@@ -4,8 +4,8 @@
     class="el-splitter-bar"
     :class="[
       direction === 'vertical'
-        ? 'el-splitter-bar-vertical'
-        : 'el-splitter-bar-horizontal',
+        ? 'el-splitter-bar--vertical'
+        : 'el-splitter-bar--horizontal',
       dragStateClass
     ]"
     ref="SplitterBarRef"
@@ -47,13 +47,13 @@ export default {
     },
     dragStateClass() {
       if (!this.canShrink && !this.canGrow) {
-        return 'el-drag-locked';
+        return 'is-drag-locked';
       } else if (!this.canShrink) {
-        return 'el-drag-min-limit'; // 已达最小，只能变大
+        return 'is-drag-min-limit'; // 已达最小，只能变大
       } else if (!this.canGrow) {
-        return 'el-drag-max-limit'; // 已达最大，只能变小
+        return 'is-drag-max-limit'; // 已达最大，只能变小
       } else {
-        return 'el-drag-normal';
+        return 'is-drag-normal';
       }
     }
   },
@@ -69,48 +69,3 @@ export default {
   }
 };
 </script>
-
-<style scoped lang="scss">
-.el-splitter-bar {
-  background: #ccc;
-  // transition: background 0.2s, cursor 0.1s;
-}
-
-/* 垂直分割条（左右拖） */
-.el-splitter-bar-vertical {
-  width: 5px;
-
-  &.el-drag-locked {
-    cursor: default;
-    background: #eee;
-  }
-  &.el-drag-min-limit { /* size == min，不能再小，只能往右拖（增大） */
-    cursor: e-resize;
-  }
-  &.el-drag-max-limit { /* size == max，不能再大，只能往左拖（减小） */
-    cursor: w-resize;
-  }
-  &.el-drag-normal {
-    cursor: col-resize;
-  }
-}
-
-/* 水平分割条（上下拖） */
-.el-splitter-bar-horizontal {
-  height: 5px;
-
-  &.el-drag-locked {
-    cursor: default;
-    background: #eee;
-  }
-  &.el-drag-min-limit { /* size == min，不能再小（高度不能再小），只能往下拖（增大） */
-    cursor: s-resize;
-  }
-  &.el-drag-max-limit { /* size == max，不能再大，只能往上拖（减小） */
-    cursor: n-resize;
-  }
-  &.el-drag-normal {
-    cursor: row-resize;
-  }
-}
-</style>
