@@ -4,8 +4,8 @@
     class="el-splitter-bar"
     :class="[
       direction === 'vertical'
-        ? 'el-splitter-bar-vertical'
-        : 'el-splitter-bar-horizontal',
+        ? 'el-splitter-bar--vertical'
+        : 'el-splitter-bar--horizontal',
       dragStateClass
     ]"
     ref="SplitterBarRef"
@@ -47,13 +47,13 @@ export default {
     },
     dragStateClass() {
       if (!this.canShrink && !this.canGrow) {
-        return 'el-drag-locked';
+        return 'is-drag-locked';
       } else if (!this.canShrink) {
-        return 'el-drag-min-limit'; // 已达最小，只能变大
+        return 'is-drag-min-limit'; // 已达最小，只能变大
       } else if (!this.canGrow) {
-        return 'el-drag-max-limit'; // 已达最大，只能变小
+        return 'is-drag-max-limit'; // 已达最大，只能变小
       } else {
-        return 'el-drag-normal';
+        return 'is-drag-normal';
       }
     }
   },
