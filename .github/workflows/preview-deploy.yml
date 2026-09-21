@@ -12,17 +12,17 @@ jobs:
     if: github.event.workflow_run.event == 'pull_request' && github.event.workflow_run.conclusion == 'success'
     steps:
       - name: download pr artifact
-        uses: dawidd6/action-download-artifact@v2
+        uses: dawidd6/action-download-artifact@v24
         with:
           workflow: ${{ github.event.workflow_run.workflow_id }}
           name: pr
 
       - name: save PR id
         id: pr
-        run: echo "::set-output name=id::$(<pr.txt)"
+        run: echo "id=$(<pr.txt)" >> "$GITHUB_OUTPUT"
 
       - name: download docs artifact
-        uses: dawidd6/action-download-artifact@v2
+        uses: dawidd6/action-download-artifact@v24
         with:
           workflow: ${{ github.event.workflow_run.workflow_id }}
           workflow_conclusion: success
@@ -35,7 +35,7 @@ jobs:
           npx surge --project ./ --domain $DEPLOY_DOMAIN --token ${{ secrets.SURGE_TOKEN }}
 
       - name: update status comment
-        uses: actions-cool/maintain-one-comment@v1.2.1
+        uses: actions-cool/maintain-one-comment@v3
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           body: |
@@ -47,7 +47,7 @@ jobs:
 
       - name: The job failed
         if: ${{ failure() }}
-        uses: actions-cool/maintain-one-comment@v1.2.1
+        uses: actions-cool/maintain-one-comment@v3
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           body: |
@@ -62,17 +62,17 @@ jobs:
     if: github.event.workflow_run.event == 'pull_request' && github.event.workflow_run.conclusion == 'failure'
     steps:
       - name: download pr artifact
-        uses: dawidd6/action-download-artifact@v2
+        uses: dawidd6/action-download-artifact@v24
         with:
           workflow: ${{ github.event.workflow_run.workflow_id }}
           name: pr
 
       - name: save PR id
         id: pr
-        run: echo "::set-output name=id::$(<pr.txt)"
+        run: echo "id=$(<pr.txt)" >> "$GITHUB_OUTPUT"
 
       - name: The job failed
-        uses: actions-cool/maintain-one-comment@v1.2.1
+        uses: actions-cool/maintain-one-comment@v3
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           body: |
