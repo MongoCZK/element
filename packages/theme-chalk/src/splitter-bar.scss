@@ -1,44 +1,48 @@
-/* 分割条样式：类名由 packages/splitter/src/SplitterBar.vue 输出
-   （el-splitter-bar-vertical / el-splitter-bar-horizontal + el-drag-*） */
+@import "mixins/mixins";
+@import "common/var";
 
-.el-splitter-bar {
+@include b(splitter-bar) {
   background: #ccc;
-}
 
-/* 垂直分割条（左右拖） */
-.el-splitter-bar-vertical {
-  width: 5px;
+  /* 垂直分割条（左右拖） */
+  @include m(vertical) {
+    width: 5px;
 
-  &.el-drag-locked {
-    cursor: default;
-    background: #eee;
+    @include when(drag-locked) {
+      cursor: default;
+      background: #eee;
+    }
+    /* size == min，不能再小，只能往右拖（增大） */
+    @include when(drag-min-limit) {
+      cursor: e-resize;
+    }
+    /* size == max，不能再大，只能往左拖（减小） */
+    @include when(drag-max-limit) {
+      cursor: w-resize;
+    }
+    @include when(drag-normal) {
+      cursor: col-resize;
+    }
   }
-  &.el-drag-min-limit { /* size == min，不能再小，只能往右拖（增大） */
-    cursor: e-resize;
-  }
-  &.el-drag-max-limit { /* size == max，不能再大，只能往左拖（减小） */
-    cursor: w-resize;
-  }
-  &.el-drag-normal {
-    cursor: col-resize;
-  }
-}
 
-/* 水平分割条（上下拖） */
-.el-splitter-bar-horizontal {
-  height: 5px;
+  /* 水平分割条（上下拖） */
+  @include m(horizontal) {
+    height: 5px;
 
-  &.el-drag-locked {
-    cursor: default;
-    background: #eee;
-  }
-  &.el-drag-min-limit { /* size == min，不能再小（高度不能再小），只能往下拖（增大） */
-    cursor: s-resize;
-  }
-  &.el-drag-max-limit { /* size == max，不能再大，只能往上拖（减小） */
-    cursor: n-resize;
-  }
-  &.el-drag-normal {
-    cursor: row-resize;
+    @include when(drag-locked) {
+      cursor: default;
+      background: #eee;
+    }
+    /* size == min，不能再小（高度不能再小），只能往下拖（增大） */
+    @include when(drag-min-limit) {
+      cursor: s-resize;
+    }
+    /* size == max，不能再大，只能往上拖（减小） */
+    @include when(drag-max-limit) {
+      cursor: n-resize;
+    }
+    @include when(drag-normal) {
+      cursor: row-resize;
+    }
   }
 }

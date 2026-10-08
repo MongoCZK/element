@@ -102,8 +102,8 @@ export default {
       {
         staticClass: 'el-splitter',
         class: {
-          'el-splitter-vertical': this.direction === 'vertical',
-          'el-splitter-horizontal': this.direction === 'horizontal'
+          'el-splitter--vertical': this.direction === 'vertical',
+          'el-splitter--horizontal': this.direction === 'horizontal'
         },
         ref: 'SplitterContainerRef'
       },
